@@ -1,0 +1,135 @@
+%INCLUIR PAQUETES
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{images/}} %carpeta de imagenes
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\usepackage{pdfpages}
+\usepackage{lipsum,appendix}
+\usepackage{enumitem} % Customize lists
+\setlist{nolistsep} % Reduce spacing between bullet points and
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{xcolor,colortbl}
+\usepackage{float} 
+\usepackage{booktabs} % Required for nicer horizontal rules in tables
+
+
+
+\usepackage{subfigure} % subfiguras
+\usepackage{lipsum}  
+
+
+%RE CONFIGURANDO LOS COMANDOS
+
+%Cambiando el nombre de los apendices a Anexos
+\renewcommand{\appendixtocname}{Anexos}
+\renewcommand{\appendixpagename}{Anexos}
+
+%Cambiar Nombres a diferentes contenidos
+\renewcommand{\listfigurename}{Lista De Figuras}
+\renewcommand{\listtablename}{Lista de Tablas}
+\renewcommand{\contentsname}{Lista de Contenidos}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\tablename}{Tabla} 
+
+
+\def\captionsspanish{%
+	\def\prefacename{Prefacio}%
+	\def\refname{Referencias}%
+	\def\abstractname{Resumen}%
+	\def\bibname{Bibliografía}%
+	\def\chaptername{Capítulo}%
+	\def\contentsname{Contenido}
+
+}
+
+
+
+
+
+
+
+%AJUSTANDO LAS MARGENES DEL DOCUMENTO
+\setmarginsrb{2.5 cm}{1 cm}{2.5 cm}{2 cm}{0.5 cm}{0.8 cm}{1 cm}{1.0 cm}
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAFIA E INDICE 
+%----------------------------------------------------------------------------------------
+
+%\usepackage[style=ieee,citestyle=numeric,sorting=none,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
+%%\addbibresource{bibliography.bib} % BibTeX bibliography file
+%\addbibresource{referencias.bib}
+%\defbibheading{bibempty}{}
+%\usepackage{calc} % For simpler calculation - used for spacing the index letter headings correctly
+%\usepackage{makeidx} % Required to make an index
+%\makeindex % Tells LaTeX to create the files required for indexing
+
+
+
+%----------------------------------------------------------------------------------------
+% FUENTES
+%----------------------------------------------------------------------------------------
+%\usepackage{fontspec}
+%\setmainfont{fonts/texgyreadventor/texgyreadventor-regular.ttf}
+
+
+%----------------------------------------------------------------------------------------
+%	ESTILO AL HEADER Y FOOTER
+%----------------------------------------------------------------------------------------
+\usepackage{xcolor}
+\usepackage{sectsty}
+\pagestyle{fancy}
+
+\newcommand{\colorplantilla}{054D77}
+
+%%%  COLOR AZUL CLARO 		-----  	197DB9
+%%%  COLOR AZUL OSCURO 		-----	054D77
+%%%  COLOR VERDE			-----  	4D8D39
+%%%  COLOR VERDE OSCURO		-----  	1A4F09
+%%%  COLOR NARANJA			-----  	CB6017
+
+%%%%%%%%%%%%%%%%%%%% SE ASIGNA COLOR DEL ENCABEZADO %%%%%%%%%%%%%%%%%
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\headrule}{\hbox to\headwidth{%
+		\color[HTML]{\colorplantilla}\leaders\hrule height \headrulewidth\hfill}}
+
+
+\fancyhf{}
+\setlength\headheight{26pt}
+
+%Imágen de cabecera
+
+%\rhead{\includegraphics[height=1.5cm]{logo.png}}
+\lhead{\scriptsize{Nombre_proyecto... \thetitle}.Descripcion_1}
+
+%\lfoot{\centering
+%	Grupo de Investigación en Seguridad y Sistemas de Comunicación (GISSIC) \\ \thepage
+%}
+
+ \fancyfoot[RO,LE]{\thepage} 
+
+
+
+%%%%%%%%%%%%%%%%% SE ASIGNA COLOR A LOS TEXTOS %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sectionfont{\color[HTML]{\colorplantilla}}  % Cambia Color a los Titulos de Seccion
+\subsectionfont{\color[HTML]{\colorplantilla}}  %Cambia color Subseccion
+\subsubsectionfont{\color[HTML]{\colorplantilla}}  % Cambia color SUB SUB SECCION
+
+%\arrayrulecolor[HTML]{\colorplantilla}
+%%%%%%%VINCULAR TODO LO QUE CONTENGA EL DOCUMENTO EN LA TABLA DE CONTENIDOS
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true, %set true if you want colored links
+	linktoc=all,     %set to all if you want both sections and subsections linked
+	linkcolor=[HTML]{\colorplantilla},  %choose some color if you want links to stand out
+	urlcolor  = [HTML]{\colorplantilla},
+	citecolor = black,
+	anchorcolor = blue
+}
+
+
+
